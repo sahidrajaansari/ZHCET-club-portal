@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <TextView
+        android:textAlignment="center"
+        android:id="@+id/text1"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="Edit Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:id="@+id/text2"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="Club Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/clubAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Admin Name"
+        app:startIconDrawable="@drawable/name"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="@color/color2"
+        app:helperText="Name*"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:helperTextTextColor="@color/color7"
+        app:layout_constraintEnd_toEndOf="@+id/text2"
+        app:layout_constraintStart_toStartOf="@+id/text2"
+        app:layout_constraintTop_toBottomOf="@+id/text2">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/eclubAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circularProgressIndicator"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/color4"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:trackColor="@color/color4" />
+
+    <TextView
+        android:id="@+id/About"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/clubDescription"
+        app:layout_constraintTop_toBottomOf="@id/Password" />
+
+
+    <EditText
+        android:id="@+id/clubDescription"
+        android:layout_width="match_parent"
+        android:layout_height ="wrap_content"
+        android:layout_below="@+id/clubAdmin"
+        android:layout_weight ="1"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines ="4"
+        android:maxLength ="2000"
+        android:scrollHorizontally="false"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:gravity="top"
+        android:hint="Club Description"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/About"
+        app:layout_constraintTop_toBottomOf="@+id/About" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password"
+        android:layout_width="0dp"
+        app:boxBackgroundColor="@color/color2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        app:boxBackgroundMode="outline"
+        app:startIconDrawable="@drawable/security"
+        app:counterEnabled="true"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        app:helperText="Password*"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:helperTextTextColor="@color/color7"
+        app:layout_constraintEnd_toEndOf="@+id/clubAdmin"
+        app:layout_constraintStart_toStartOf="@+id/clubAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/clubAdmin">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/epassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editBtn"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:lines="@integer/material_motion_duration_long_1"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/follow_active_btn"
+        android:enabled="false"
+        android:text="Edit"
+        android:textColor="@color/color1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clubDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

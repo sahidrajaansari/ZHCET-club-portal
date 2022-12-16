@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.aboutus">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="Contact Us"
+        android:textColor="@color/color4"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/Image1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sahid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/statusCircle1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/orange_circle_background"
+                app:layout_constraintBottom_toBottomOf="@+id/Image1"
+                app:layout_constraintEnd_toEndOf="@+id/Image1"
+                app:layout_constraintStart_toStartOf="@+id/Image1"
+                app:layout_constraintTop_toTopOf="@+id/Image1" />
+
+            <TextView
+                android:id="@+id/Clubname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sahid Raja Ansari"
+                android:textColor="#000"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/Image1"
+                app:layout_constraintStart_toStartOf="@+id/Image1"
+                app:layout_constraintTop_toBottomOf="@id/Image1" />
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Clubname"
+                android:text="https://www.linkedin.com/in/sahid-raja-ansari-3554a6216/"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/Clubname"
+                app:layout_constraintStart_toStartOf="@+id/Clubname"
+                app:layout_constraintTop_toBottomOf="@+id/Clubname" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/Image2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/rifat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/statusCircle2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/orange_circle_background"
+                app:layout_constraintBottom_toBottomOf="@+id/Image2"
+                app:layout_constraintEnd_toEndOf="@+id/Image2"
+                app:layout_constraintStart_toStartOf="@+id/Image2"
+                app:layout_constraintTop_toTopOf="@+id/Image2" />
+
+            <TextView
+                android:id="@+id/Clubname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Rifat Fatma"
+                android:textColor="#000"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/Image2"
+                app:layout_constraintStart_toStartOf="@+id/Image2"
+                app:layout_constraintTop_toBottomOf="@id/Image2" />
+
+            <TextView
+                android:id="@+id/link2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Clubname2"
+                android:textColor="#000"
+                android:text="https://www.linkedin.com/in/rifat-fatma-7aba31226/"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/Clubname2"
+                app:layout_constraintStart_toStartOf="@+id/Clubname2"
+                app:layout_constraintTop_toBottomOf="@+id/Clubname2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

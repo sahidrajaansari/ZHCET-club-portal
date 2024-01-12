@@ -32,7 +32,7 @@ public class ClublistAdapter extends FirebaseRecyclerAdapter<ModelClub,ClublistA
             if(model.getStatus().equals(check)){
 //                holder.Clubname.setText(model.getClubname());
 //                holder.admin.setText(model.getUser());
-                holder.status.setText("Status :"+" Validated");
+                holder.status.setText("Status :"+" Validated" + "Enjoy");
             }
             else{
                 holder.status.setText("Status :"+" Pending");
